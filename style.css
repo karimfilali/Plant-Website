@@ -1,0 +1,253 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+*{
+    font-family: 'Montserrat';
+}
+
+html{
+    scroll-behavior: smooth; /* Scroller sur la page de manière fluide quand on clique sur un lien */
+}
+
+body{
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+.top-page{
+    background: url("images/bg.jpg"); /* ../ pour retourner un dossier en arrière  */
+    background-size: cover;
+    height: 80vh; /* Sinon, la hauteur est égale à celle que prend les éléments */
+    color: white;
+    padding: 25px;
+}
+
+header img{
+    width: 150px;
+}
+
+/* Menu de navigation */
+
+.navheader{
+    display: flex; /* Utiliser des flexbox */
+    justify-content: space-between; /* Permet d'espacer également tous les éléments de la liste sur la largeur donnée */
+    list-style: none; /* Retirer les petits points de la liste */
+    margin-left: 30px;
+    width: 400px;
+}
+
+.navheader a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Page de navigation */
+
+.landing-page{
+    position: relative;
+    padding: 20px 50px;
+}
+
+.landing-page h1{
+    font-size: 80px;
+    font-family: 'Abril FatFace', cursive;
+    font-weight: 100;
+    width: 50%;
+}
+
+.scroll{
+    color: white;
+    text-decoration: none; /* Retire le souligné car c'est un lien */
+    position : absolute;
+    bottom: 0;
+}
+
+/* Services */
+
+.services{
+    display: flex; /* Mettre les éléments en ligne */
+    justify-content: space-between; /* Permet d'espacer également tous les éléments de la liste sur la largeur donnée (ici toute la largeur de la page) */
+    margin: 50px;
+}
+
+.services-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone{
+    font-size: 50px;
+    color: #ADD981;
+}
+
+.services p{
+    font-weight: 600;
+    width: 200px; /* Pour avoir un saut à la ligne */
+    text-align: center;
+}
+
+/* Bests-items */
+
+.section-title{
+    font-size: 50px;
+    font-family: 'Abril FatFace', cursive;
+    font-weight: 100;
+    position: relative;
+}
+
+.section-title::before{
+    content: ""; /* Pour le faire apparaître */
+    position: absolute; /* On peut choisir par rapport à un élément en position relative s'il se positionne en haut, à gauche, en bas, à droite */
+    background-color:#ADD981;
+    width: 50px;
+    height: 7px;
+    bottom:0; /* Pour mettre la barre verte sous le texte grâce aux position absolute et relative */
+}
+
+.best-items{
+    margin: 100px;
+}
+
+.best-plants{
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap; /* Les images ne s'écrasent pas */
+}
+
+.plant-box{
+    background-size: cover; /* Pour éviter la répétition de l'image */
+    background-position: center; /* Pour centrer l'image */
+    position: relative;
+}
+
+.no-grid{
+    min-width: 350px;
+    height: 500px;
+    flex: 1; /* Occupe toute la largeur de l'écran */
+}
+
+.plant1{
+    background-image: url("images/nos_meilleures_ventes/1.jpg");
+}
+
+.plant2{
+    background-image: url("images/nos_meilleures_ventes/2.jpg");
+}
+
+.plant3{
+    background-image: url("images/nos_meilleures_ventes/3.jpg");
+}
+
+.plant4{
+    background-image: url("images/nos_meilleures_ventes/4.jpg");
+}
+
+.details{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFFFFFDF;
+    position: absolute;
+    bottom: 0; /* Pour placer la div en bas */
+    width: 100%; /* Pour prendre toute la largeur */
+    justify-content: space-around;
+}
+
+.row1{
+    flex-basis: 30%;
+    flex-direction: column;
+}
+
+.plant-name{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 4px;
+}
+
+.plant-price{
+    color:#ADD981;
+    font-weight: 800;
+    line-height: 4px;
+    font-size: 14px;
+}
+
+.more-info{
+    background-color: #ADD981;
+    color:white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 22px;
+    margin-top: 15px;
+    padding: 5px;
+    flex-basis: 70%;
+    max-width: 200px;
+    max-height: 25px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 1px 2px #888888;
+}
+
+.more-info:hover{
+    opacity: 0.7;
+}
+/* Nos plantes */
+
+.all-plants{
+    margin: 100px;
+}
+
+.plant-grid{
+    display: grid; /* Afficher les éléments sous la forme d'une grille */
+    /* Il faut maintenant donner une taille à la grille */
+    grid-gap: 10px; /* Mettre de l'espace entre les images */
+    min-height: 150hv;
+    grid-template-columns: repeat(4, 1fr); /* Pour avoir quatre colonnes */
+    grid-template-rows: repeat(4, 400px);
+}
+
+.plant-grid1{
+    background-image: url("images/nos_plantes/1.jpg");
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.plant-grid2{
+    background-image: url("images/nos_plantes/2.jpg");
+    grid-column: 3/5;
+}
+.plant-grid3{
+    background-image: url("images/nos_plantes/3.jpg");
+    grid-column: 3/5;
+}
+.plant-grid4{
+    background-image: url("images/nos_plantes/4.jpg");
+    grid-column: 1;
+    grid-row: 3/5;
+}
+.plant-grid5{
+    background-image: url("images/nos_plantes/5.jpg");
+    grid-column: 2/4;
+    grid-row: 3/5;
+}
+.plant-grid6{
+    background-image: url("images/nos_plantes/6.jpg");
+    grid-column: 4;
+    grid-row: 3/5;
+}
+
+/* Footer */
+
+footer{
+    display: flex; /* Les uns à côté des autres */
+    align-items: center;
+    margin: 20px 100px;
+    justify-content: space-between; /* Pour avoir le premier élément tout à gauche et le deuxième tout à droite */
+    font-weight: 600;
+}
+
+.cgv{
+    text-decoration: none; /* Retirer le souligné du lien */
+    color: black;
+}
